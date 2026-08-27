@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>מכירת מקומות לימים נוראים — חניכי ישיבת חברון</title>
+<meta name="description" content="מכירת מקומות לימים נוראים — בית הכנסת הגדול חניכי ישיבת חברון, בני ברק">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold:#b08a3e;
+    --gold-light:#d9bb74;
+    --ink:#2e2114;
+    --cream:#faf6ee;
+    --panel:#ffffff;
+    --line:#e6dbc4;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:"Frank Ruhl Libre", "David Libre", Georgia, serif;
+    line-height:1.6;
+  }
+  .wrap{max-width:640px;margin:0 auto;padding:0 18px 48px;}
+
+  /* ===== כותרת ===== */
+  header{text-align:center;padding:34px 0 20px;}
+  .kicker{
+    font-size:.95rem;letter-spacing:.18em;color:var(--gold);
+    text-transform:none;margin:0 0 10px;
+  }
+  h1{
+    font-size:2rem;font-weight:900;margin:0 0 6px;line-height:1.25;
+  }
+  h2.sub{
+    font-size:1.15rem;font-weight:500;margin:0;color:#6b5a42;
+  }
+  .rule{
+    display:flex;align-items:center;gap:12px;margin:22px 0 4px;
+  }
+  .rule::before,.rule::after{
+    content:"";flex:1;height:1px;
+    background:linear-gradient(to left,transparent,var(--gold-light),transparent);
+  }
+  .rule span{color:var(--gold);font-size:1.3rem;}
+
+  /* ===== תמונה ===== */
+  .hero{
+    margin:20px 0 8px;border-radius:16px;overflow:hidden;
+    border:1px solid var(--line);
+    box-shadow:0 10px 30px rgba(46,33,20,.13);
+  }
+  .hero img{display:block;width:100%;height:auto;}
+
+  /* ===== טקסט ===== */
+  .lead{
+    text-align:center;font-size:1.08rem;color:#584833;
+    margin:22px 4px 30px;
+  }
+
+  /* ===== כפתורים ===== */
+  a.btn{
+    display:block;position:relative;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:20px 22px;margin-bottom:16px;
+    text-decoration:none;color:var(--ink);
+    box-shadow:0 3px 10px rgba(46,33,20,.07);
+    transition:transform .12s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  a.btn::before{
+    content:"";position:absolute;inset-inline-start:0;top:12%;bottom:12%;
+    width:4px;border-radius:4px;
+    background:linear-gradient(to bottom,var(--gold-light),var(--gold));
+  }
+  a.btn:hover{
+    transform:translateY(-2px);
+    border-color:var(--gold-light);
+    box-shadow:0 10px 22px rgba(46,33,20,.14);
+  }
+  a.btn:active{transform:translateY(0);}
+  .btn-title{display:block;font-size:1.25rem;font-weight:700;}
+  .btn-desc{display:block;font-size:.95rem;color:#7b6a52;margin-top:2px;}
+
+  footer{
+    text-align:center;margin-top:34px;color:#8b7a61;font-size:.9rem;
+  }
+
+  @media (max-width:420px){
+    h1{font-size:1.6rem;}
+    h2.sub{font-size:1rem;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="kicker">ברוכים הבאים</p>
+    <h1>מכירת מקומות לימים נוראים</h1>
+    <div class="rule"><span>&#10086;</span></div>
+    <h2 class="sub">
+      בית הכנסת חניכי ישיבת חברון<br>
+      בית הכנסת הגדול &middot; בני ברק
+    </h2>
+  </header>
+
+  <div class="hero">
+    <img src="shul.jpg" alt="היכל בית הכנסת" width="638" height="472">
+  </div>
+
+  <p class="lead">
+    לנוחיותכם, בחרו את האפשרות המבוקשת:
+  </p>
+
+  <a class="btn" href="https://example.com/1">
+    <span class="btn-title">רכישת מקומות</span>
+    <span class="btn-desc">בחירת מקום ותשלום מאובטח</span>
+  </a>
+
+  <a class="btn" href="https://example.com/2">
+    <span class="btn-title">מפת בית הכנסת</span>
+    <span class="btn-desc">צפייה במקומות הפנויים</span>
+  </a>
+
+  <a class="btn" href="https://example.com/3">
+    <span class="btn-title">יצירת קשר</span>
+    <span class="btn-desc">לשאלות, בירורים וסיוע</span>
+  </a>
+
+  <footer>
+    כתיבה וחתימה טובה
+  </footer>
+
+</div>
+</body>
+</html>
