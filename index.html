@@ -7,13 +7,13 @@
 <meta name="description" content="מכירת מקומות לימים נוראים תשפ"ז — בית הכנסת הגדול חניכי ישיבת חברון, בני ברק">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root{
     --gold:#a8813a;
     --gold-light:#d9bb74;
     --gold-pale:#f0e4c8;
-    --ink:#2b1f13;
+    --ink:#241a10;
     --muted:#6f5e46;
     --cream:#fbf8f1;
     --panel:#ffffff;
@@ -24,29 +24,29 @@
     margin:0;
     background:radial-gradient(circle at 50% 0%, #fffdf8 0%, var(--cream) 55%);
     color:var(--ink);
-    font-family:"Frank Ruhl Libre","David Libre",Georgia,serif;
-    line-height:1.65;
+    font-family:"Rubik","Segoe UI",Arial,sans-serif;
+    line-height:1.6;
     text-align:center;
   }
-  .wrap{max-width:640px;margin:0 auto;padding:0 18px 56px;}
+  .wrap{max-width:660px;margin:0 auto;padding:0 18px 56px;}
 
   .topbar{
     height:6px;
     background:linear-gradient(to left,var(--gold),var(--gold-light),var(--gold));
   }
 
-  header{padding:40px 0 8px;}
+  header{padding:42px 0 8px;}
   .kicker{
-    font-size:.9rem;letter-spacing:.22em;color:var(--gold);margin:0 0 14px;
+    font-size:1rem;font-weight:600;letter-spacing:.22em;color:var(--gold);margin:0 0 14px;
   }
   h1{
-    font-size:2.1rem;font-weight:900;margin:0;line-height:1.3;
+    font-size:2.4rem;font-weight:900;margin:0;line-height:1.3;
     background:linear-gradient(to left,#7a5c22,#a8813a,#7a5c22);
     -webkit-background-clip:text;background-clip:text;
     -webkit-text-fill-color:transparent;
   }
   h2.sub{
-    font-size:1.1rem;font-weight:500;margin:14px 0 0;color:var(--muted);
+    font-size:1.25rem;font-weight:500;margin:16px 0 0;color:var(--muted);
   }
 
   .rule{display:flex;align-items:center;gap:14px;margin:26px 0;}
@@ -56,15 +56,15 @@
   }
   .rule span{color:var(--gold);font-size:1.15rem;letter-spacing:.3em;}
 
-  /* ===== הודעה — מעוצבת כטקסט חגיגי, לא ככפתור ===== */
+  /* ===== הודעה — טקסט חגיגי, לא כפתור ===== */
   .notice{
     position:relative;
-    margin:6px 6px 30px;
-    padding:6px 10px 4px;
+    margin:6px 0 30px;
+    padding:0 8px;
   }
   .notice-title{
-    font-size:1rem;font-weight:700;color:var(--gold);
-    letter-spacing:.14em;margin:0 0 14px;
+    font-size:1.1rem;font-weight:700;color:var(--gold);
+    letter-spacing:.14em;margin:0 0 16px;
   }
   .notice-title::before,.notice-title::after{
     content:"◆";
@@ -74,15 +74,15 @@
     vertical-align:middle;
   }
   .notice p{
-    margin:0 0 14px;font-size:1.08rem;color:var(--ink);
+    margin:0 0 14px;font-size:1.18rem;font-weight:500;color:var(--ink);
   }
   .notice p:last-child{margin-bottom:0;}
   .notice .fine{
-    font-size:.97rem;color:var(--muted);font-style:italic;
+    font-size:1.05rem;font-weight:400;color:var(--muted);
   }
   .notice .men{
     font-weight:700;color:var(--gold);
-    font-size:1.05rem;
+    font-size:1.2rem;
   }
 
   /* ===== כפתורים ===== */
@@ -91,7 +91,7 @@
     background:var(--panel);
     border:1px solid var(--line);
     border-radius:16px;
-    padding:26px 24px;margin-bottom:18px;
+    padding:28px 24px;margin-bottom:18px;
     text-decoration:none;color:var(--ink);
     box-shadow:0 3px 12px rgba(43,31,19,.07);
     transition:transform .12s ease,box-shadow .2s ease,border-color .2s ease;
@@ -108,13 +108,13 @@
     box-shadow:0 12px 26px rgba(43,31,19,.14);
   }
   a.btn:active{transform:translateY(0);}
-  .btn-title{display:block;font-size:1.45rem;font-weight:700;line-height:1.4;}
-  .btn-desc{display:block;font-size:1.08rem;color:var(--muted);margin-top:8px;}
+  .btn-title{display:block;font-size:1.65rem;font-weight:800;line-height:1.4;}
+  .btn-desc{display:block;font-size:1.18rem;font-weight:500;color:var(--muted);margin-top:8px;}
 
   /* ===== טבלת מחירים ===== */
   .prices{margin-top:14px;}
   .prices-title{
-    font-size:1.05rem;font-weight:700;color:var(--gold);
+    font-size:1.2rem;font-weight:700;color:var(--gold);
     letter-spacing:.1em;margin:0 0 16px;
   }
   .prices img{
@@ -123,15 +123,15 @@
     box-shadow:0 8px 24px rgba(43,31,19,.1);
   }
 
-  footer{margin-top:36px;color:#8b7a61;font-size:.95rem;}
-  footer .bless{color:var(--gold);font-size:1.05rem;letter-spacing:.05em;}
+  footer{margin-top:36px;color:#8b7a61;font-size:1.05rem;}
+  footer .bless{color:var(--gold);font-weight:600;font-size:1.15rem;letter-spacing:.05em;}
 
   @media (max-width:420px){
-    h1{font-size:1.7rem;}
-    h2.sub{font-size:1rem;}
-    .notice p{font-size:1rem;}
-    .btn-title{font-size:1.28rem;}
-    .btn-desc{font-size:1rem;}
+    h1{font-size:1.95rem;}
+    h2.sub{font-size:1.1rem;}
+    .notice p{font-size:1.05rem;}
+    .btn-title{font-size:1.4rem;}
+    .btn-desc{font-size:1.05rem;}
   }
 </style>
 </head>
@@ -153,17 +153,17 @@
   <section class="notice">
     <p class="notice-title">הודעה חשובה</p>
     <p>
-      עקב מצוקת מקום, המכירה למקומות בעזרת נשים היא אך ורק
-      לבעלי הוראת קבע או מקום קבוע.
-    </p>
-    <p class="fine">
-      ניתן להירשם לרשימת המתנה למקום בעזרת נשים,
-      ובמידה ויתפנה מקום יישלח אליכם מייל להשלמת הרכישה.
+      עקב מצוקת מקום, מכירת מקומות בעזרת נשים היא אך ורק לבעלי הוראת קבע או מקום קבוע.
+      ניתן להירשם לרשימת המתנה, ובמידה ויתפנה מקום יישלח מייל להשלמת הרכישה.
     </p>
     <p class="men">בעזרת גברים המכירה כרגיל.</p>
+    <p class="fine">
+      לאחר הקנייה חובה לוודא קבלת מייל אישור — השנה במייל אין פירוט הקנייה, לכן יש לוודא לפני החיוב שאין טעויות.
+      ההנחות למתפללים תקפות למשפחה הגרעינית בלבד; לרכישה עבור אדם נוסף ניתן לרכוש מקום במחיר מלא.
+    </p>
   </section>
 
-  <a class="btn" href="https://yoshev-new-frontend.onrender.com/register/6a3af9c0bf59595afa000001/%D7%AA%D7%A9%D7%A4%D7%96">
+  <a class="btn" href="https://yoshev-new-frontend.onrender.com/register/6a3af9c0bf59595afa000001/תשפ%22ז">
     <span class="btn-title">רכישת מקומות לימים נוראים</span>
     <span class="btn-desc">גברים ונשים</span>
   </a>
@@ -175,7 +175,7 @@
 
   <a class="btn" href="https://ultra.kesherhk.info/external/forms/edit/2765">
     <span class="btn-title">יצירת קשר</span>
-    <span class="btn-desc">בכל בעיה או שאלה</span>
+    <span class="btn-desc">בכל בעיה או שאלה, וכן לבקשות בנוגע למקום הישיבה</span>
   </a>
 
   <div class="rule"><span>&#10086;</span></div>
