@@ -59,34 +59,23 @@
   /* ===== התראה בולטת ===== */
   .alert{
     position:relative;
-    margin:0 0 28px;
+    margin:0 0 22px;
     padding:20px 22px;
-    background:linear-gradient(to left,#fdeceb,#fff6f5);
-    border:1.5px solid #e8a9a4;
+    background:linear-gradient(to left,#e9f7ec,#f6fdf8);
+    border:1.5px solid #a9d9b6;
     border-radius:16px;
-    box-shadow:0 6px 20px rgba(178,42,34,.16);
+    box-shadow:0 6px 20px rgba(37,122,66,.14);
   }
   .alert::before{
     content:"";position:absolute;top:0;bottom:0;right:0;width:5px;
     border-radius:0 16px 16px 0;
-    background:linear-gradient(to bottom,#d6453a,#a3271e);
+    background:linear-gradient(to bottom,#5cb87a,#2f8a4f);
   }
   .alert-title{
-    display:flex;align-items:center;justify-content:space-between;gap:12px;
-    font-size:1.15rem;font-weight:800;color:#a3271e;
+    display:block;font-size:1.15rem;font-weight:800;color:#256b3f;
     letter-spacing:.08em;margin:0 0 10px;
   }
-  .alert-date{
-    font-size:.92rem;font-weight:600;color:#8c5a54;
-    letter-spacing:.04em;white-space:nowrap;
-  }
-  .alert p{margin:0;font-size:1.12rem;font-weight:500;color:#4a1c17;}
-
-  @keyframes alertPulse{
-    0%,100%{box-shadow:0 6px 20px rgba(178,42,34,.16);}
-    50%{box-shadow:0 6px 26px rgba(178,42,34,.36);}
-  }
-  .alert{animation:alertPulse 2.6s ease-in-out infinite;}
+  .alert p{margin:0;font-size:1.12rem;font-weight:500;color:#1e3f2b;}
 
   /* ===== הודעה — טקסט חגיגי, לא כפתור ===== */
   .notice{
@@ -182,17 +171,6 @@
 
   <div class="rule"><span>&#10086;</span></div>
 
-  <section class="alert">
-    <span class="alert-title">
-      <span>&#9888; שימו לב</span>
-      <span class="alert-date">מוצש"ק פרשת כי תבוא</span>
-    </span>
-    <p>
-      ישנה תקלה אצל חלק ממשתמשי נטפרי בכניסה לרישום. אנו עובדים על תיקון התקלה.
-      במידה ואתם מקבלים הודעת שגיאה — נסו להיכנס שוב במועד מאוחר יותר.
-    </p>
-  </section>
-
   <section class="notice">
     <p class="notice-title">הודעה חשובה</p>
     <p>
@@ -203,6 +181,15 @@
     <p class="fine">
       לאחר הקנייה חובה לוודא קבלת מייל אישור — השנה במייל אין פירוט הקנייה, לכן יש לוודא לפני החיוב שאין טעויות.
       ההנחות למתפללים תקפות למשפחה הגרעינית בלבד; לרכישה עבור אדם נוסף ניתן לרכוש מקום במחיר מלא.
+    </p>
+  </section>
+
+
+  <section class="alert">
+    <span class="alert-title">&#9888; שימו לב</span>
+    <p>
+      ניתן להנפיק את הקבלה על שם שונה מהשם המופיע במפה.
+      בשלב הראשוני יש לכתוב את השם שיופיע במפה, ובשלב התשלום ניתן לבחור את השם ומספר תעודת הזהות שעליהם תונפק הקבלה.
     </p>
   </section>
 
