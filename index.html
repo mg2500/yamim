@@ -144,6 +144,53 @@
     box-shadow:0 8px 24px rgba(43,31,19,.1);
   }
 
+
+  /* ===== סגירת הרשמה + סיסמה ===== */
+  a.btn.btn-locked{
+    cursor:default;
+    opacity:.72;
+    background:#faf7f1;
+  }
+  a.btn.btn-locked .btn-title,
+  a.btn.btn-locked .btn-desc{color:#9a8d79;}
+  a.btn.btn-locked:hover{transform:none;box-shadow:0 3px 12px rgba(43,31,19,.07);border-color:var(--line);}
+  .btn-closed{
+    display:block;margin-top:12px;
+    font-size:1.15rem;font-weight:800;color:#c0271c;letter-spacing:.06em;
+  }
+  a.btn.btn-open .btn-closed{display:none;}
+  a.btn.btn-open{cursor:pointer;opacity:1;background:var(--panel);}
+  a.btn.btn-open .btn-title{color:var(--ink);}
+  a.btn.btn-open .btn-desc{color:var(--muted);}
+
+  .pass-box{
+    display:none;
+    margin:-6px 0 18px;
+    padding:14px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:14px;
+  }
+  .pass-box.show{display:block;}
+  .pass-box input{
+    width:150px;padding:10px 12px;
+    font-family:inherit;font-size:1.05rem;text-align:center;
+    border:1px solid var(--line);border-radius:10px;background:var(--cream);color:var(--ink);
+  }
+  .pass-box input:focus{outline:none;border-color:var(--gold-light);}
+  .pass-box button{
+    margin-right:8px;padding:10px 20px;
+    font-family:inherit;font-size:1.05rem;font-weight:700;
+    color:#fff;background:var(--gold);
+    border:none;border-radius:10px;cursor:pointer;
+  }
+  .pass-box button:hover{background:#8f6c2c;}
+  .pass-err{
+    display:none;margin-top:10px;
+    font-size:1rem;font-weight:600;color:#c0271c;
+  }
+  .pass-err.show{display:block;}
+
   footer{margin-top:36px;color:#8b7a61;font-size:1.05rem;}
   footer .bless{color:var(--gold);font-weight:600;font-size:1.15rem;letter-spacing:.05em;}
 
@@ -193,10 +240,18 @@
     </p>
   </section>
 
-  <a class="btn" href="https://yoshev-new-frontend.onrender.com/register/6a3af9c0bf59595afa000001/תשפ%22ז">
+  <a class="btn btn-locked" id="regBtn" href="#" role="button" aria-disabled="true">
     <span class="btn-title">רכישת מקומות לימים נוראים</span>
     <span class="btn-desc">גברים ונשים</span>
+    <span class="btn-closed" id="regClosed">ההרשמה הסתיימה</span>
   </a>
+
+  <div class="pass-box" id="passBox">
+    <input type="password" id="passInput" inputmode="numeric" autocomplete="off"
+           placeholder="הזינו סיסמה" aria-label="סיסמה">
+    <button type="button" id="passBtn">אישור</button>
+    <span class="pass-err" id="passErr">סיסמה שגויה</span>
+  </div>
 
   <a class="btn" href="https://ultra.kesherhk.info/external/forms/edit/2766">
     <span class="btn-title">רשימת המתנה למקומות בעזרת נשים</span>
@@ -220,5 +275,44 @@
   </footer>
 
 </div>
+
+<script>
+(function(){
+  var URL_REG = "https://yoshev-new-frontend.onrender.com/register/6a3af9c0bf59595afa000001/\u05EA\u05E9\u05E4%22\u05D6";
+  var CODE = "6161";
+  var btn = document.getElementById("regBtn");
+  var box = document.getElementById("passBox");
+  var inp = document.getElementById("passInput");
+  var ok  = document.getElementById("passBtn");
+  var err = document.getElementById("passErr");
+
+  btn.addEventListener("click", function(e){
+    if(btn.classList.contains("btn-open")) return;
+    e.preventDefault();
+    box.classList.add("show");
+    inp.focus();
+  });
+
+  function tryUnlock(){
+    if(inp.value.trim() === CODE){
+      btn.href = URL_REG;
+      btn.classList.remove("btn-locked");
+      btn.classList.add("btn-open");
+      btn.removeAttribute("aria-disabled");
+      box.classList.remove("show");
+      err.classList.remove("show");
+    } else {
+      err.classList.add("show");
+      inp.value = "";
+      inp.focus();
+    }
+  }
+
+  ok.addEventListener("click", tryUnlock);
+  inp.addEventListener("keydown", function(e){
+    if(e.key === "Enter"){ e.preventDefault(); tryUnlock(); }
+  });
+})();
+</script>
 </body>
 </html>
